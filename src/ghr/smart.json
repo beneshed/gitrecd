@@ -1,9 +1,0 @@
-{
-  "packages": {
-    "github-api": {},
-    "bootstrap-3": {},
-    "iron-router": {},
-    "jquery-ui-bootstrap": {},
-    "autoform": {}
-  }
-}
