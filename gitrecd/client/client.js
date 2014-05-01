@@ -1,6 +1,6 @@
 if(Meteor.isClient) {
     Meteor.startup(function () {
-      Session.set('progressText', 'Calculating Recommendations');
+      Hooks.init();
       Session.set('progressPercent', 10);
     });
     Deps.autorun(function () {
@@ -10,23 +10,8 @@ if(Meteor.isClient) {
         Session.set('progressPercent', info.session_int);
       }
     });
-  Meteor.methods({
-    getLoad: function() {
-    },
-    //add starred repos to raccoon
-    getStarredRepos: function() {
-    },
-    //get following 
-    getFollowing: function() {
-    },
-    //get starred of each follower
-    getStarredFollowing: function() {
-    },
-    //add starred repos to raccoon
-    addToRaccoon: function() {
-    },
-    //get recoomendation for user
-    getRecommendation: function() {
+    Hooks.onLoggedOut = function(userId) {
+      Session.set('progressPercent', 0);
+      Session.keys = {};
     }
-  })
 }

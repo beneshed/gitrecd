@@ -5,7 +5,8 @@
       "circular-progress": {},
       "iron-router": {},
       "npm": {},
-      "github-api": {}
+      "github-api": {},
+      "event-hooks": {}
     },
     "packages": {
       "circular-progress": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/ndhoule/meteor-github-api.git",
         "tag": "v0.1.11",
         "commit": "3f72e744cdf4aca0e77cc39022ed6f3b53200734"
+      },
+      "event-hooks": {
+        "git": "https://github.com/BenjaminRH/meteor-event-hooks.git",
+        "tag": "v1.4.3",
+        "commit": "ba4f3d7887748458618d29615492906f0c88d31c"
       },
       "d3": {
         "git": "https://github.com/sergeyt/meteor-d3.git",

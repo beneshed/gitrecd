@@ -13,3 +13,4 @@ github-api
 accounts-ui
 circular-progress
 jquery
+event-hooks

@@ -3,6 +3,7 @@
     "circular-progress": {},
     "iron-router": {},
     "npm": {},
-    "github-api": {}
+    "github-api": {},
+    "event-hooks": {}
   }
 }
