@@ -25,9 +25,7 @@ Template.home.helpers({
         }
       }
     }
-    $("svg-progress-container").hide();
     return distinct;
     }
   }
 });
-
