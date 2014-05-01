@@ -2,7 +2,10 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "circular-progress": {}
+      "circular-progress": {},
+      "iron-router": {},
+      "npm": {},
+      "github-api": {}
     },
     "packages": {
       "circular-progress": {
@@ -10,10 +13,30 @@
         "tag": "v0.9.4",
         "commit": "a1ac50b28444a36b3e0532caa988877658f86a22"
       },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      },
+      "github-api": {
+        "git": "https://github.com/ndhoule/meteor-github-api.git",
+        "tag": "v0.1.11",
+        "commit": "3f72e744cdf4aca0e77cc39022ed6f3b53200734"
+      },
       "d3": {
         "git": "https://github.com/sergeyt/meteor-d3.git",
         "tag": "v3.4.1",
         "commit": "bdfee250a332b516a158ed0913ec9363850afe0d"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       }
     }
   }

@@ -95,17 +95,22 @@ Accounts.onLogin(function(user) {
         }
       } });
     }
+
+    var Fiber = Meteor.require('fibers');
     Loads.update({username: user.user.ghname}, {username: user.user.ghname, session_int: 75}); 
     //make reccomendation
+    raccoon.liked(user.user.ghname, 'test', function() {});
     raccoon.recommendFor(user.user.ghname, 3, function(fuckThis){
+      console.log(fuckThis);
+      console.log(fuckThis.length);
       // results will be an array of x ranked recommendations for chris
       //   // in this case it would contain movie2
       //   });})
-      raccoon.liked(user.user.ghname, 'test', function() {});
       for(end=0;end<fuckThis.length;end++)
       {
+          Fiber(function() {
           Recs.insert({ username:user.user.ghname, rec:fuckThis[end] });
+          }).run();
       }
-    });
-    
+      });
 });

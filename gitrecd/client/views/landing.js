@@ -1,5 +1,6 @@
 Template.home.helpers({
   recs : function() { 
+    Session.set("progressPercent", 100);
     var distinct = [];
     if(Meteor.user()){
       var arr = Recs.find({ username: Session.get("gname").username }).fetch();
@@ -24,6 +25,7 @@ Template.home.helpers({
         }
       }
     }
+    $("svg-progress-container").hide();
     return distinct;
     }
   }
