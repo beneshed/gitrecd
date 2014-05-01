@@ -1,11 +1,12 @@
 if(Meteor.isClient) {
     Meteor.startup(function () {
       Session.set('progressText', 'Calculating Recommendations');
+      Session.set('progressPercent', 10);
     });
     Deps.autorun(function () {
       if(Meteor.user()){
-      var info = Loads.findOne({username: Meteor.user().profile.login});
-      Session.set('progressPercent', info.session_int);
+        var info = Loads.findOne({username: Meteor.user().profile.login});
+        Session.set('progressPercent', info.session_int);
       }
     });
   Meteor.methods({
