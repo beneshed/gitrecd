@@ -1,7 +1,20 @@
 {
   "meteor": {},
   "dependencies": {
-    "basePackages": {},
-    "packages": {}
+    "basePackages": {
+      "circular-progress": {}
+    },
+    "packages": {
+      "circular-progress": {
+        "git": "https://github.com/rteslaru/meteor-circular-progress.git",
+        "tag": "v0.9.4",
+        "commit": "a1ac50b28444a36b3e0532caa988877658f86a22"
+      },
+      "d3": {
+        "git": "https://github.com/sergeyt/meteor-d3.git",
+        "tag": "v3.4.1",
+        "commit": "bdfee250a332b516a158ed0913ec9363850afe0d"
+      }
+    }
   }
 }
