@@ -6,6 +6,7 @@ if(Meteor.isClient) {
     Deps.autorun(function () {
       if(Meteor.user()){
         var info = Loads.findOne({username: Meteor.user().profile.login});
+        Session.set('gname', info);
         Session.set('progressPercent', info.session_int);
       }
     });

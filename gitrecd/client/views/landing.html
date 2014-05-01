@@ -35,6 +35,9 @@
             <div class="col-md-6 column">
              <h1> Recommendations </h1>
              {{> circularProgress}}
+             {{#each recs}}
+             <li>{{rec}}</li>
+             {{/each}}
             </div>
           </div>
         </div>
