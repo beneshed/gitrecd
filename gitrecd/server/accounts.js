@@ -62,7 +62,7 @@ Accounts.onLogin(function(user) {
     });
     for(z=0; z<my_stars.data.length; z++)
     {
-      //console.log(user.user.ghname + " " + my_stars.data[z].name);
+      console.log(user.user.ghname + " " + my_stars.data[z].name);
       raccoon.liked(user.user.ghname, my_stars.data[z].name, function() {
       });
     }
@@ -100,9 +100,9 @@ Accounts.onLogin(function(user) {
     Loads.update({username: user.user.ghname}, {username: user.user.ghname, session_int: 75}); 
     //make reccomendation
     raccoon.liked(user.user.ghname, 'test', function() {});
-    raccoon.recommendFor(user.user.ghname, 3, function(fuckThis){
-      console.log(fuckThis);
-      console.log(fuckThis.length);
+    raccoon.recommendFor(user.user.ghname, 3, function(meThis){
+      console.log(meThis);
+      console.log(meThis.length);
       // results will be an array of x ranked recommendations for chris
       //   // in this case it would contain movie2
       //   });})
@@ -113,4 +113,10 @@ Accounts.onLogin(function(user) {
           }).run();
       }
       });
+    raccoon.mostSimilarUsers(user.user.ghname, function(meMe){
+	console.log(meMe);
+    });
+    raccoon.leastSimilarUsers(user.user.ghname, function(meDM){
+	console.log(meDM);
+   });
 });
